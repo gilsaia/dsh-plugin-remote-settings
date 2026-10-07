@@ -1,0 +1,10 @@
+# Bundle patch for @gilsaia/dsh-plugin-remote-settings.
+#
+# Selecting this bundle in a profile's `dsh.profile.bundles` mounts the row
+# below. The row names this package, so it resolves from the profile's own
+# node_modules; the config gate keeps the plugin inert unless it is turned on.
+- insert:
+    - id: remote-settings
+      name: '@gilsaia/dsh-plugin-remote-settings'
+      config:
+        privilegedSurface: true

@@ -1,0 +1,41 @@
+{
+  "name": "@gilsaia/dsh-plugin-remote-settings",
+  "version": "0.1.0",
+  "description": "Declare the served DeepSeek Harness Web GUI page as the Host-owning privileged surface, so settings and model configuration are usable from a non-loopback authority.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-host-webserver": "^0.2.0-rc.2"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "cordis-plugin",
+    "dsh-plugin"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  }
+}
